@@ -4,9 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [workspace]
-members = [
-    ""
-]
+members = ["ch17_async_rust"]
 
 [dependencies]
 rand = "0.10.3"

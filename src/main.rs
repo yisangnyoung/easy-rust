@@ -1,12 +1,14 @@
-use std::fs;
-use std::io::Write;
+/// 이것은 아무것도 하지 않는 구조체입니다.
+struct DoesNothing {}
 
-fn main() -> std::io::Result<()> {
-    // 다음 이름으로 파일을 만듭니다.
-    // 조심하세요. 이미 이 이름의 파일이 있으면 내용이 모두 삭제됩니다.
-    let mut file = fs::File::create("myfilename.txt")?;
+/// 이 구조체에는 메서드가 하나만 있습니다.
+struct PrintThing {}
 
-    // " 앞의 b를 잊지 마세요. 파일은 바이트를 사용하기 때문입니다.
-    file.write_all(b"Let's put this in the file")?;
-    Ok(())
+/// 항상 같은 메시지를 출력합니다.
+impl PrintThing {
+    fn prints_something() {
+        println!("I am printing something");
+    }
 }
+
+fn main() {}
